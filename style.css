@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root {
+    --rosa:#e8b4b8;
+    --rosac:#f6dfe0;
+    --vermelho: #8b1e2d;
+    --marrom: #5c3d2e;
+    --creme: #fbf3ee;
+    --vermelhoe: #50161b;
+    --branco: #FFFFFF;
+}
+
+*{ 
+    box-sizing: border-box;
+
+ }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0px 20px;
+    background: var(--vermelhoe);
+    color: var(--branco);
+    
+    line-height: 1.75;
+    background-image: url(img/rosas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background: var(--creme);
+    border: 3px solid var(--vermelho);
+    border-radius: 6px;
+    outline: 2px solid var(--rosa);
+    outline-offset: 6px;
+
+    transition-duration: 0.4s;
+
+}
+header:hover{
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 50px white;
+}
+header img {
+    width: 230px;
+    height: auto;
+    flex-shrink: 0;
+    border: 8px solid var(--vermelho);
+    outline: 3px solid var(--rosa);
+    outline-offset: 5px;
+    box-shadow: 0 8px 18px rgba(188, 105, 105, 0.885);
+}
+
+h1 {
+    color:var(--vermelhoe);
+    font-size: 2.1em;
+    font-family: "Merienda";
+    text-align: center;
+    text-shadow: 0px 0px 20px rgb(170, 99, 99);
+}
+h1:hover{
+    text-overflow: 0px 0px 10px white;
+}
+section{
+    max-width: 1000px;
+    margin:auto;
+    padding: 10px;
+    background-color: var(--creme);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    p{
+        color: #8b1e2d;
+        font-family: "Fredoka", sans-serif;
+ 
+
+    }
+    h2{
+        color: var(--vermelhoe);
+        text-shadow: 1px 10px 30px rgb(36, 3, 3);
+        font-family: "Merienda", Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-size: 1.8em;
+    }
+    h3{
+        color:#50161b;
+        font-family: "Merienda";
+        text-shadow: 1px 10px 30px rgb(36, 3, 3);
+    }
+} 
+
+
+
+#flor { display: none; }
+
+.botao-flor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 12px 20px;
+  color: white;
+  background: var(--vermelho);
+  border: 3px solid var(--rosa);
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Merienda";
+  transition-duration: 0.4s;
+}
+
+.botao-flor:hover {
+     background-color: rgba(188, 52, 52, 0.937);
+    
+}
+.chuva span {
+  position: fixed;
+  top: -40px;
+  left: var(--x);
+  font-size: 1.8rem;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#flor:checked ~ .chuva span {
+  animation: cair var(--t) var(--d) linear forwards;
+}
+
+@keyframes cair {
+  0%   { opacity: 1; transform: translateY(0) rotate(0); }
+  100% { opacity: 1; transform: translateY(110vh) rotate(360deg); }
+}
+#flor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+footer {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  padding: 25px;
+  text-align: center;
+  color: var(--rosa-claro);
+  background: var(--vermelhoe);
+  border-top: 6px solid var(--vermelho);
+  border-radius: 6px;
+  outline: 2px solid var(--rosa);
+  outline-offset: 6px;
+}
+
+footer p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+footer p:first-child {
+  font-size: 1.1rem;
+  font-style: "italic";
+  font-family: "Merienda";
+}
+
+footer p:first-child::before,
+footer p:first-child::after {
+  content: " 🌹 ";
+}
+
+footer p:last-child {
+  font-size: 0.9rem;
+  color: var(--rosa);
+}
